@@ -48,6 +48,7 @@ libc = "0.2.82"
 log = "0.4.13"
 notify = "5.0.0-pre.4"
 percent-encoding = "2.1.0"
+quinn = { git = "https://github.com/quinn-rs/quinn", branch = "tokio-0.3" }
 regex = "1.4.3"
 ring = "0.16.19"
 rustyline = { version = "7.1.0", default-features = false }

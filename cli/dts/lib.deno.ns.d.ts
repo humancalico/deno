@@ -1703,6 +1703,16 @@ declare namespace Deno {
     [Symbol.asyncIterator](): AsyncIterableIterator<Conn>;
   }
 
+  export interface QuicEndpoint {
+    readonly rid: number;
+    readonly hostname: string;
+    readonly port: number;
+
+    close(): void;
+  }
+
+  export function createQuicEndpoint(hostname: string, port: number): QuicEndpoint;
+
   export interface Conn extends Reader, Writer, Closer {
     /** The local address of the connection. */
     readonly localAddr: Addr;
